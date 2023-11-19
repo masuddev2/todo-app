@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Counter from "./Counter";
 
 const Counters = () => {
   const [data, setData] = useState([]);
 
+  useEffect(() =>{
+    console.log('use effect');
+  },[])
+
+
+  console.log('log');
+  
   const handleAddCounter = () => {
     setData([...data, { id: data.length + 1, value: 0 }]);
   };

@@ -1,8 +1,9 @@
 import React from "react";
-import Counters from "./components/counter/Counters";
+import { RouterProvider } from "react-router-dom";
+import router from "./_route";
 
 const App = () => {
-  return <Counters />
+  return <RouterProvider router={router} />;
 };
 
 export default App;
